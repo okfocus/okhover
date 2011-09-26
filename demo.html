@@ -1,0 +1,35 @@
+<!doctype html>
+<head>
+<title>
+okhover demo
+</title>
+<style>
+a{font-family:fantasy;font-size:50px;color:blue;font-weight:bold}
+a:visited{color:blue;}
+</style>
+</head>
+<body>
+<ul>
+<!-- DEMO WITH BACKGROUND SKELETON IMAGE -->
+  <div data-okimage='http://dumpfm.s3.amazonaws.com/images/20101223/1293127325595-dumpfm-smokecrack-1280187644055-dumpfm-noisia-girlafraid-green-skeleton-walk-boring-broken.gif'>
+    <a href='#'>I'm a link and this is a demo!</a>
+  </div>
+  <hr>
+<!-- DEMO WITH AVATAR BACKGROUND IMAGE -->
+    <div data-okimage='http://dumpfm.s3.amazonaws.com/images/20101220/1292825670304-dumpfm-HowIQuitCrak-avatarsucks.gif'>
+    <a href='#'>PS - Avatar was a cool movie.</a>
+  </div>
+</ul>
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="okhover.js"></script>
+<script>
+  $(document).ready(function(){
+      $('div').okhover({
+          fadeIn: true,
+          fadeOut: true,
+          fadeInDuration: 200
+      });  
+  });
+</script>
+</html>
