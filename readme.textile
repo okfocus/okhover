@@ -4,7 +4,7 @@ p. Okhover is a jQuery plugin that makes it easy to reproduce the tiled backgrou
 
 h3. Requirements
 
-p. The only real techincal requirement besides jQuery itself, is declaring the HMTL5 content type for your web application. This is achieved by making sure the first line of your HTML is @<!doctype html>@. This ensures that using data attributes will be considered valid markup by browsers.
+p. The only real techincal requirement besides jQuery itself, is declaring the HMTL5 doctype for your web application. This is achieved by making sure the first line of your HTML is @<!doctype html>@. This ensures that using data attributes will be considered valid markup by browsers.
 
 h3. Usage
 
