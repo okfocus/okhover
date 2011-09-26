@@ -1,6 +1,6 @@
 h1. okhover by OKFocus
 
-p. Okhover is a jQuery plugin that makes it easy to reproduce the fade effect seen on the "OKFocus website":http://okfoc.us. It uses HTML5 data attributes and is designed to be simple yet highly customizable.
+p. Okhover is a jQuery plugin that makes it easy to reproduce the tiled background effect seen on the "OKFocus website":http://okfoc.us. It uses HTML5 data attributes and is designed to be simple yet highly customizable.
 
 h3. Requirements
 
