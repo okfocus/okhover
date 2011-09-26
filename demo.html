@@ -15,16 +15,50 @@
 <meta property="og:url" content="http://okfoc.us" />
 <meta property="og:site_name" content="OKFocus is a full service digital agency." />
 <style type="text/css">
-a{font-family:fantasy;font-size:50px;color:blue;font-weight:bold}
-a:visited{color:blue;}
-hr{width:20%}
-img{width:200px;}
+a {
+     border: medium none;
+     color: blue;
+     font-family: fantasy;
+     font-size: 50px;
+     font-weight: bold;
+}
+
+a:visited {
+     color: blue;
+}
+
+hr {
+     width: 20%;
+}
+
+img {
+     border: medium none;
+     max-height: 150px;
+     max-width: 200px;
+}
+#rapper{width:800px;margin:0 auto;}
+pre{text-align:left;background:lightyellow;width:300px;padding:10px;margin:20px;}
+span p{text-transform:uppercase;font-size:14px;letter-spacing:6px;text-align:center;font-style:italic;font-family: Comic Sans MS, cursive;font-weight:100;color:#333;-webkit-transform: rotate(-1deg);-moz-transform: rotate(-1deg);}
 </style>
 </head>
 <body>
-<center>
+<center id="rapper">
 <a href="http://okfoc.us"><img src="http://okfoc.us/assets/images/logo.gif"></a>
 <hr>
+<span>
+<p>
+The basic options are as follow
+</p>
+<pre>
+  $(document).ready(function(){
+      $('div').okhover({
+          fadeIn: true,
+          fadeOut: true,
+          fadeInDuration: 200
+      });  
+  });
+</pre>
+</span>
 
 <!-- DEMO WITH BACKGROUND SKELETON IMAGE -->
   <div data-okimage='http://dumpfm.s3.amazonaws.com/images/20101223/1293127325595-dumpfm-smokecrack-1280187644055-dumpfm-noisia-girlafraid-green-skeleton-walk-boring-broken.gif'>
@@ -37,6 +71,8 @@ img{width:200px;}
     <a href='#'>PS - Avatar was a cool movie.</a>
   </div>
 <!-- END DEMO 2 --> 
+
+<a href="https://github.com/okfocus/okhover/zipball/master"><img src="download.png"style="margin:20px"></a>
 </body>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
 <script type="text/javascript" src="okhover.js"></script>
