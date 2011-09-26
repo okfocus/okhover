@@ -10,9 +10,7 @@ h3. Usage
 
 p. For a simple example, consider this snippet of code:
 
-bc..
-
-<ul>
+bc. <ul>
   <li data-okimage='http://example.com/path/to/an/image.gif'>
     <a href='#'>I'm a link</a>
   </li>
@@ -20,8 +18,7 @@ bc..
 
 p. The above will have no visible effect. To achive the hovering effect, you'll have to include this javascript.
 
-bc..
-<script>
+bc. <script>
   $(document).ready(function(){
       $('li').okhover();  
   });
@@ -41,8 +38,7 @@ p. The following options are available to you:
 
 p. Here's an example with a lot of options:
 
-bc..
-<script>
+bc. <script>
   $(document).ready(function(){
       $('li').okhover({
           fadeIn: true,
