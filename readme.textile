@@ -1,0 +1,76 @@
+h1. okhover by OKFocus
+
+p. Okhover is a jQuery plugin that makes it easy to reproduce the tiled background effect seen on the "OKFocus website":http://okfoc.us. It uses HTML5 data attributes and is designed to be simple yet highly customizable.
+
+h3. Requirements
+
+p. The only real technical requirement besides jQuery itself, is declaring the HMTL5 doctype for your web application. This is achieved by making sure the first line of your HTML is @<!doctype html>@. This ensures that using data attributes will be considered valid markup by browsers.
+
+h3. Usage
+
+p. For a simple example, consider this snippet of code:
+
+bc. <ul>
+  <li data-okimage='http://example.com/path/to/an/image.gif'>
+    <a href='#'>I'm a link</a>
+  </li>
+</ul>
+
+p. The above will have no visible effect. To achieve the hovering effect, you'll have to include this javascript.
+
+bc. <script>
+  $(document).ready(function(){
+      $('li').okhover();  
+  });
+</script>
+
+p. When you hover on an @<li>@, you'll now see the okhover effect in action. The data attribute @data-image@ is a reference to the image that will appear tiled in the background.
+
+h3. Options
+
+p. The following options are available to you:
+
+* fadeIn - A boolean that controls if the background image will fade in. Defaults to false.
+* fadeOut - A boolean that controls if the background image will fade out. Defaults to false.
+* fadeInDuration - A number that controls how long the fade-in will be (in milliseconds). Defaults to 400 milliseconds.
+* fadeOutDuration - A number that controls how long the fade-in will be (in milliseconds). Defaults to 400 milliseconds.
+* zIndex - A number that controls the z-index of the background div. Defaults to -1.
+ 
+p. Here's an example with a lot of options:
+
+bc. <script>
+  $(document).ready(function(){
+      $('li').okhover({
+          fadeIn: true,
+          fadeOut: true,
+          fadeInDuration: 2000,
+          zIndex: 420
+      });  
+  });
+</script>
+
+<hr>
+
+
+h3. License
+
+p. Copyright (c) 2011 OKFocus, http://okfoc.us
+
+p. Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+p. The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+p. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
