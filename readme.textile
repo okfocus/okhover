@@ -10,25 +10,22 @@ h3. Usage
 
 p. For a simple example, consider this snippet of code:
 
-<code>
+bc..
 
 <ul>
   <li data-okimage='http://example.com/path/to/an/image.gif'>
     <a href='#'>I'm a link</a>
   </li>
 </ul>
-        
-</code>
 
 p. The above will have no visible effect. To achive the hovering effect, you'll have to include this javascript.
 
-<code>
+bc..
 <script>
   $(document).ready(function(){
       $('li').okhover();  
   });
 </script>
-</code>
 
 p. When you hover on an @<li>@, you'll now see the okhover effect in action. The data attribute @data-image@ is a reference to the image that will appear tiled in the background.
 
@@ -44,7 +41,7 @@ p. The following options are available to you:
 
 p. Here's an example with a lot of options:
 
-<code>
+bc..
 <script>
   $(document).ready(function(){
       $('li').okhover({
@@ -55,7 +52,6 @@ p. Here's an example with a lot of options:
       });  
   });
 </script>
-</code>
 
 h4. License
 
