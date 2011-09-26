@@ -52,7 +52,7 @@ bc. <script>
 <hr>
 
 
-h4. License
+h3. License
 
 p. Copyright (c) 2011 OKFocus, http://okfoc.us
 
