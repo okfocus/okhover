@@ -44,7 +44,7 @@
                         background.css('backgroundPosition', e.pageX + 'px ' + e.pageY + 'px');
                     });
 
-                    background.css('backgroundImage', 'url(' + $(this).attr('data-okimage') + ')');
+                    background.css('backgroundImage', 'url(' + $(this).attr('data-okimage') + ')').show();
 
                     if (base.options.fadeIn) background.stop().fadeTo(base.options.fadeInDuration, 1);
                 },
