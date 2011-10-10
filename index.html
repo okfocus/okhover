@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+<head>
+  <title>OKHover</title>
+  <meta charset='utf-8'>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+  <script src='okhover.js'></script>
+  <script>
+    $(function(){
+        $("#examples li").okhover();
+    });
+  </script>
+  <style type="text/css">
+    body {
+      margin: 20px;
+      background: url('img/photocopy.png');
+      font-family: sans-serif;
+      font-size: 15px;
+      line-height: 22px;
+      color: #333;
+    }
+    #container {
+      width: 600px;
+      margin: 0 auto;
+    }
+    ul#sidebar {
+      display: inline-block;
+      margin: 15px 10px 0 0; padding: 0;
+      vertical-align: top;
+      width: 120px;
+    }
+    ul#sidebar li {
+      list-style-type: none;
+    }
+    a {
+      color #00f;
+    }
+    table {
+      margin-top: -10px;
+    }
+    th {
+      text-align: left;
+      vertical-align: top;
+      font-weight: normal;
+      padding-right: 10px;
+      color: #000;
+      font-style: italic;
+    }
+    td {
+      vertical-align: top;
+      padding-left: 0;
+      padding-right: 10px;
+      color: #555;
+    }
+    td b {
+      color: #444;
+    }
+    #example1 {
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      background-color: #ddd;
+      margin: 0 20px;
+      z-index: -1;
+    }
+    #example2 {
+      display: inline-block;
+      width: 300px;
+    }
+    #example3 {
+      display: inline-block;
+    }
+    #example3 a:hover {
+      color: red !important;
+      text-shadow: none !important;
+    }
+    #ok {
+      display: inline-block;
+      height: 100px;
+      width: 100px;
+      background: #f4f0f8 url(social_media_icon_transparent.png);
+      background-position: center center;
+      background-size: cover;
+      border-radius:50px;
+    }
+    h1 {
+      font-size: 72px;
+      line-height: 12px;
+      margin-left: 20px;
+      font-weight: bold;
+      font-style: italic;
+      display: inline-block;
+      color: #444;
+    }
+    #content {
+      display: inline-block;
+      width: 600px;
+      vertical-align: top;
+    }
+    pre {
+      border: 1px solid #ddd;
+      background: rgb(238,238,238);
+      background: rgba(238,238,238,0.5);
+      font-size: 12px;
+      line-height: 15px;
+      padding: 5px 0 5px 10px;
+      width: 250px;
+      display: inline-block;
+      margin-right: 10px;
+    }
+    pre#license {
+      width: auto;
+      margin: 0;
+      padding: 10px;
+    }
+    pre#methods {
+      width: auto;
+      padding: 10px;
+    }
+    pre a {
+      color: #00f;
+    }
+    p {
+      width: 100%;
+    }
+    .centered {
+      text-align:center
+    }
+
+  </style>
+
+</head>
+<body>
+<div id="container">
+  <div id="header">
+    <div id="ok"></div>
+    <h1>okhover&nbsp;&nbsp;</h1>
+  </div>
+  <ul id="sidebar">
+  </ul>
+  <div id="content">
+    <h2>OKHover by OKFocus</h2>
+    <p>
+      OKHover is a jQuery plugin that makes it easy to reproduce the tiled background effect seen on the <a href="http://okfoc.us">OKFocus website</a>. It uses HTML5 data attributes and is designed to be simple yet highly customizable.
+    </p>
+
+    <h3>Examples</h3>
+    <ul id="examples">
+      <li data-okimage="http://okfoc.us/assets/images/wow.gif">hover</li>
+      <li data-okimage="http://okfoc.us/assets/images/cat.jpeg">on</li>
+      <li data-okimage="social_media_icon_transparent.png">something</li>
+      
+    </ul>
+
+    <h3>Usage</h3>
+    <p>
+      OKHover binds to any DOM element, usually a list item.
+    </p>
+    <code>
+    <script>
+      $(function() {
+//        $('#example1').okshadow();
+      });
+    </script>
+    
+    <a href='#' data-okimage='http://example.com/path/to/an/image.gif'>a link</a>
+    </code>
+
+
+    <h3>Options</h3>
+    <table id="params" cellspacing="0">
+      <tr><th>fadeIn</th>
+        <td>A boolean that controls if the background image will fade in</td>
+        <td width='100'><b>false</b></td>
+      </tr>
+      <tr><th>fadeOut</th>
+        <td>A boolean that controls if the background image will fade out</td>
+        <td width='100'><b>false</b></td>
+      </tr>
+      <tr><th>fadeInDuration</th>      
+        <td>A number that controls how long the fade-in will be (in milliseconds).</td>
+        <td width='100'><b>400 milliseconds</b></td>
+      </tr>
+      <tr><th>fadeOutDuration</th>      
+        <td>A number that controls how long the fade-out will be (in milliseconds).</td>
+        <td width='100'><b>400 milliseconds</b></td>
+      </tr>
+      <tr><th>zIndex</th>    
+        <td>A number that controls the z-index of the background div.</td>
+        <td width='100'><b>-1</b></td>
+      </tr>
+    </table>
+
+  <h3>Requirements</h3>
+
+<p>The only real technical requirement besides jQuery itself, is declaring the HTML5 doctype for your web application. This ensures that using data attributes will be considered valid markup by browsers.</p>
+
+  <h3 class='centered'><a href="https://github.com/okfocus/okhover/archives/master">Download OKHover</a> or <a href="http://github.com/okfocus/okhover">Contribute on Github</a></h3>
+
+  <h3>License</h3>
+    <pre id="license">
+Copyright © 2011 OKFocus, <a href="http://okfoc.us">http://okfoc.us</a>
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+“Software”), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</pre>
+  </pre>
+</div>
+</body>
+</html>
