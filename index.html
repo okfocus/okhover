@@ -1,7 +1,13 @@
 <!doctype html>
 <html>
 <head>
-  <title>OKHover</title>
+  <title>OKHover - jQuery Plugin by OKFocus</title>
+  <meta property="og:title" content="OKHover" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://okfoc.us/okhover/" />
+  <meta property="og:image" content="http://okfoc.us/okhover/img/okhover.png" />
+  <meta property="og:site_name" content="OKFocus" />
+  <meta property="fb:admins" content="34601449,13005337,100001923956223" />
   <meta charset='utf-8'>
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
   <script src='okhover.js'></script>
@@ -9,11 +15,13 @@
     $(function(){
         $("#examples li").okhover();
     });
-  </script>
+      </script>
   <style type="text/css">
     body {
       margin: 20px;
       background: url('img/photocopy.png');
+      background-attachment:fixed;
+      background-position:top center;
       font-family: sans-serif;
       font-size: 15px;
       line-height: 22px;
@@ -55,6 +63,8 @@
     td b {
       color: #444;
     }
+    #examples{padding-top:20px;}
+    #examples li{list-style:none;font-size:20px;color:#333;display:inline;cursor:pointer; font-family: Monaco, "Courier New", Courier, monospace;padding:10px;}
     #example1 {
       display: inline-block;
       height: 40px;
@@ -74,15 +84,6 @@
       color: red !important;
       text-shadow: none !important;
     }
-    #ok {
-      display: inline-block;
-      height: 100px;
-      width: 100px;
-      background: #f4f0f8 url(social_media_icon_transparent.png);
-      background-position: center center;
-      background-size: cover;
-      border-radius:50px;
-    }
     h1 {
       font-size: 72px;
       line-height: 12px;
@@ -97,21 +98,27 @@
       width: 600px;
       vertical-align: top;
     }
-    pre {
-      border: 1px solid #ddd;
+    code#exampleline {
+	  border: 1px solid #ddd;
+      background: rgb(238,238,238);
+      background: rgba(238,238,238,0.5);
+      font-size: 12px;
+      color:#333;display:inline-block;width:500px;
+      line-height: 15px;
+      padding: 15px 0 15px 10px;
+
+    }
+    pre#license {
+      width: 550px;
+      margin: 0;
+      padding: 10px;
+	  border: 1px solid #ddd;
       background: rgb(238,238,238);
       background: rgba(238,238,238,0.5);
       font-size: 12px;
       line-height: 15px;
       padding: 5px 0 5px 10px;
-      width: 250px;
       display: inline-block;
-      margin-right: 10px;
-    }
-    pre#license {
-      width: auto;
-      margin: 0;
-      padding: 10px;
     }
     pre#methods {
       width: auto;
@@ -130,7 +137,8 @@
       padding-bottom:30px;
       margin-bottom:40px;
     }
-
+      header img {padding-bottom:15px;margin-top:10px;max-width:200px;height:33px;}
+      h2{text-transform:uppercase;font-size:15px;letter-spacing:6px;margin-bottom:20px;margin-top:-10px;font-style:italic;font-family: Comic Sans MS, cursive;font-weight:100;color:#333;-webkit-transform: rotate(-1deg);-moz-transform: rotate(-1deg); }
   </style>
     <script type="text/javascript">
       var _sf_startpt=(new Date()).getTime(); // chartbeat
@@ -148,10 +156,28 @@
     </script>
 </head>
 <body>
+  
 <div id="container">
+
   <div id="header">
-    <div id="ok"></div>
-    <h1>okhover&nbsp;&nbsp;</h1>
+    <a href="http://okfoc.us"><header>
+      <!-- img loaded with js -->
+    </header></a>
+    <hr>
+    <script>
+    (function() {
+      // cachebusting or whatever,,
+      var d = new Date(),
+      logo = document.createElement('img'),
+      header = document.getElementsByTagName('header')[0],
+      nav = document.getElementsByTagName('nav')[0];
+      logo.src = 'http://okfoc.us/assets/images/logo.gif?ok=' + d.getTime();
+      header.insertBefore(logo,nav);
+    })();
+    </script>
+
+   <!-- <div id="ok"></div>
+    <h1>okhover&nbsp;&nbsp;</h1>-->
   </div>
   <ul id="sidebar">
   </ul>
@@ -163,56 +189,57 @@
 
     <h3>Examples</h3>
     <ul id="examples">
-      <li data-okimage="http://okfoc.us/assets/images/wow.gif">hover</li>
-      <li data-okimage="http://okfoc.us/assets/images/cat.jpeg">on</li>
-      <li data-okimage="social_media_icon_transparent.png">something</li>
-      
+      <li data-okimage="img/hamsterdance.gif">hover</li>
+      <li class="x2" data-okimage="img/anitestpattern.gif"><img src="img/on.png"></li>
+      <li data-okimage="img/chuck.jpg">these</li><br>
+      <li data-okimage="img/german-shepherd-pattern.gif"><img src="img/newthings.gif"></li>
     </ul>
 
     <h3>Usage</h3>
     <p>
       OKHover binds to any DOM element, usually a list item.
     </p>
-    <code>
-    <script>
-      $(function() {
-//        $('#example1').okshadow();
+    <code id="exampleline">
+      $(function() {<br/>
+     &nbsp;&nbsp;&nbsp;&nbsp;$('#example1').okshadow();<br/>
       });
-    </script>
-    
-    <a href='#' data-okimage='http://example.com/path/to/an/image.gif'>a link</a>
-    </code>
+      
+     <br/><br/> 
+    &lt;a href='#' data-okimage='http://example.com/path/to/an/image.gif'&gt; a link &lt;/a&gt;
 
+    </code>
 
     <h3>Options</h3>
     <table id="params" cellspacing="0">
       <tr><th>fadeIn</th>
-        <td>A boolean that controls if the background image will fade in</td>
+        <td>Boolean, controls if the background image will fade in</td>
         <td width='100'><b>false</b></td>
       </tr>
       <tr><th>fadeOut</th>
-        <td>A boolean that controls if the background image will fade out</td>
+        <td>Boolean, controls if the background image will fade out</td>
         <td width='100'><b>false</b></td>
       </tr>
       <tr><th>fadeInDuration</th>      
-        <td>A number that controls how long the fade-in will be (in milliseconds).</td>
-        <td width='100'><b>400 milliseconds</b></td>
+        <td>Number, controls fade-in duration (in milliseconds)</td>
+        <td width='100'><b>400</b></td>
       </tr>
       <tr><th>fadeOutDuration</th>      
-        <td>A number that controls how long the fade-out will be (in milliseconds).</td>
-        <td width='100'><b>400 milliseconds</b></td>
+        <td>Number, controls fade-out duration (in milliseconds)</td>
+        <td width='100'><b>400</b></td>
       </tr>
       <tr><th>zIndex</th>    
-        <td>A number that controls the z-index of the background div.</td>
+        <td>Number, controls the z-index of the background div</td>
         <td width='100'><b>-1</b></td>
       </tr>
     </table>
-
+    
   <h3>Requirements</h3>
 
 <p>The only real technical requirement besides jQuery itself, is declaring the HTML5 doctype for your web application. This ensures that using data attributes will be considered valid markup by browsers.</p>
-
-  <h3 class='centered'><a href="https://github.com/okfocus/okhover/archives/master">Download OKHover</a> or <a href="http://github.com/okfocus/okhover">Contribute on Github</a></h3>
+  <h3><a href="https://github.com/okfocus/okhover/zipball/master">Download OKHover</a> or <a href="http://github.com/okfocus/okhover">Contribute on Github</a><br><br><a href="https://twitter.com/okfocus" class="twitter-follow-button">Follow @okfocus</a>
+	      <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>       
+	      <iframe src="//www.facebook.com/plugins/like.php?app_id=220585137996235&amp;href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FOKFocus%2F126395247420599&amp;send=false&amp;layout=button_count&amp;width=50&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=lucida+grande&amp;height=20" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:50px; height:20px; clear:both;background:transparent;" ></iframe>
+     </h3>
 
   <h3>License</h3>
     <pre id="license">
@@ -235,8 +262,7 @@ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
 NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</pre>
-  </pre>
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.<br><img src="http://okfoc.us/assets/images/okhover.png"style="padding:10px"><img src="img/OSI-Approved-License.png"style="padding:10px;"></pre>
 </div>
 
     <script type="text/javascript">
