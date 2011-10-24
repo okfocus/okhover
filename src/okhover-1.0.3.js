@@ -37,7 +37,9 @@
             
             if (base.options.fadeIn) background.hide();
             if (base.options.zIndex) background.css('zIndex', base.options.zIndex);
-
+            
+            base.preload(base.$el);
+            
             base.$el.bind({
                 mouseover: function(){                    
                     $(this).mousemove(function(e){
@@ -54,7 +56,15 @@
                 }
             });
         };
-            
+         
+        base.preload = function(elements) {
+            elements.each(function(){
+                if ($(this).attr('data-okimage')) {
+                    (new Image()).src = $(this).attr('data-okimage');
+                }
+            });
+        };
+        
         base.init();
     };
     
