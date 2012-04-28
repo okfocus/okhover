@@ -1,16 +1,16 @@
+/*
+ * OKHover by OKFocus v1.1
+ * http://okfoc.us 
+ *
+ * Copyright 2012, OKFocus
+ * Licensed under the MIT license.
+ *
+ */
+
 (function($){
     
     $(function(){
-        $('body').append('<div id="ok-bg"></div>');
-        $('#ok-bg').css({
-            width : '100%',
-            height : '100%',
-            background : 'scroll 150% 150% repeat',
-            zIndex : -1,
-            position : 'fixed',
-            top : 0,
-            left : 0
-        });
+        $('body').append('<div id="ok-bg" style="width:100%;height:100%;background:scroll 150% 150% repeat;z-index:-1;position:fixed;top:0;left:0;"></div>');
     });
     
     $.okhover = function(el, options){
@@ -46,9 +46,10 @@
                         background.css('backgroundPosition', e.pageX + 'px ' + e.pageY + 'px');
                     });
 
-                    background.css('backgroundImage', 'url(' + $(this).attr('data-okimage') + ')').show();
+                    background.css('backgroundImage', 'url(' + $(this).attr('data-okimage') + ')');
 
-                    if (base.options.fadeIn) background.stop().fadeTo(base.options.fadeInDuration, 1);
+                    if (base.options.fadeIn) background.css('opacity', 0).stop().fadeTo(base.options.fadeInDuration, 1);
+                    else background.show();
                 },
                 mouseout: function(){
                     if (base.options.fadeOut) background.stop().fadeTo(base.options.fadeOutDuration, 0, function() { $(this).css('backgroundImage', '').hide() });
