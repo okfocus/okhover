@@ -59,6 +59,11 @@ The following options are available to you:
       <td>A number that controls the z-index of the background div</td>
       <td>-1</td>
     </tr>
+    <tr>
+      <td>el</td>
+      <td>If you would like to the effect to appear somewhere else (any DOM elmenet that supports the background-image property)</td>
+      <td>null</td>
+    </tr>
   </tbody>
 </table>
  
@@ -70,7 +75,8 @@ $(function(){
         fadeIn: true,
         fadeOut: true,
         fadeInDuration: 2000,
-        zIndex: 420
+        zIndex: 420,
+        el: 'a'
     });  
 });
 ```
