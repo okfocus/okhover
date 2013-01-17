@@ -1,0 +1,38 @@
+{
+  "name": "okhover",
+  "version": "1.1.0",
+  "title": "okhover",
+  "description": "A jQuery Plugin that creates a memorable tiled background effect, manipulated by mouse movement.",
+  "homepage": "https://github.com/okfocus/okhover",
+  "docs": "https://github.com/okfocus/okhover",
+  "demo": "http://okfoc.us/okhover",
+  "licenses": [{
+    "type": "MIT",
+    "url": "https://raw.github.com/okfocus/okhover/master/license"
+  }],
+  "keywords": ["hover", "background", "effect", "tile", "mouse", "mousemove", "okfocus"],
+  "author": {
+    "name": "OKFocus",
+    "url": "https://github.com/okfocus"
+  },
+  "maintainers": [{
+    "name": "Jonathan Vingiano",
+    "url": "https://github.com/jgv"
+  },
+  {
+    "name": "Jules LaPlace",
+    "url": "https://github.com/julescarbon"
+  },
+  {
+    "name": "Ryder Ripps",
+    "url": "https://github.com/ryderr"
+  }],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/okfocus/okhover.git"
+  },
+  "bugs": "https://github.com/okfocus/okhover/issues",
+  "dependencies": {
+    "jquery": ">=1.4"
+  }
+}
