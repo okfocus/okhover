@@ -20,7 +20,7 @@ p. The above will have no visible effect. To achieve the hovering effect, you'll
 
 bc. <script>
   $(document).ready(function(){
-      $('li').okhover();  
+      $('li').okhover();
   });
 </script>
 
