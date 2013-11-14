@@ -1,6 +1,6 @@
 /*
- * OKHover by OKFocus v1.2
- * http://okfoc.us 
+ * OKHover by OKFocus v1.2.1
+ * http://okfoc.us
  *
  * Copyright 2012, OKFocus
  * Licensed under the MIT license.
@@ -10,12 +10,12 @@
 (function($){
   
   $.okhover = function(el, options){
-    var base = this;       
+    var base = this;
     base.$el = $(el);
-    base.el = el;        
+    base.el = el;
     base.$el.data("okhover", base);
     
-    base.init = function(){            
+    base.init = function(){
       base.options = $.extend({}, $.okhover.options, options);
       
       if (!base.options.el) $('body').append('<div id="ok-bg" style="width:100%;height:100%;background:scroll 150% 150% repeat;z-index:-1;position:fixed;top:0;left:0;"></div>');
@@ -33,7 +33,7 @@
     
     base.start = function () {
 
-      var background = base.options.el ? $(el) : $("#ok-bg");
+      var background = base.options.el ? $(base.options.el) : $("#ok-bg");
         
       if (base.options.fadeIn && !base.options.el) background.hide();
       if (base.options.zIndex) background.css('zIndex', base.options.zIndex);
@@ -41,9 +41,8 @@
       base.preload(base.$el);
       
       base.$el.bind({
-        mouseover: function(){                    
+        mouseover: function(){
           $(this).mousemove(function(e){
-            
             background.css('backgroundPosition', e.pageX + 'px ' + e.pageY + 'px');
           });
 
@@ -86,7 +85,7 @@
   
   $.fn.okhover = function(options){
     return this.each(function(){
-      (new $.okhover(this, options));            
+      (new $.okhover(this, options));
     });
   };
   

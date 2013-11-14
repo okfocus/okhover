@@ -61,7 +61,7 @@ The following options are available to you:
     </tr>
     <tr>
       <td>el</td>
-      <td>If you would like to the effect to appear somewhere else (any DOM elmenet that supports the background-image property)</td>
+      <td>If you would like to the effect to appear somewhere else (any DOM element that supports the background-image property)</td>
       <td>null</td>
     </tr>
   </tbody>
@@ -77,7 +77,7 @@ $(function(){
         fadeInDuration: 2000,
         zIndex: 420,
         el: 'a'
-    });  
+    });
 });
 ```
 
